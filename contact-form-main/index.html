@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="img" href="assets/images">
+    <link rel="icon" href="assets/images/favicon-32x32.png">
+    <script src="app.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+    <title>Contact Form</title>
+</head>
+<body>
+    <main>
+        <div class="success-msg" id="success">
+            <div class="msg-child">
+                <img src="assets/images/icon-success-check.svg" alt="success-img">
+                <p>Message Sent!</p>
+            </div>
+            <p class="lst-p">Thanks for completing the form. We'll be in touch soon!</p>
+        </div>
+        <form id="myForm">
+            <h1>Contact Us</h1>
+            <section id="sect1">
+                <div class="combine">
+                    <div class="lft-com">
+                        <label for="firstname">First Name</label>
+                        <input type="text" name="fst-name" id="firstname" class="inp">
+                        <p id="error-message"></p>
+                    </div>
+                    <div class="rgh-com">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" name="lst-name" id="lastname" class="inp">
+                        <p id="error-message"></p>
+                    </div>
+                </div>
+                <div class="eml-com">
+                    <label for="Email">Email Address</label>
+                    <input type="text" name="eml" id="Email" class="inp">
+                    <p id="error-message"></p>
+                </div>
+            </section>
+            <section id="sect2">
+                <div class="cont">
+                    <label for="chk-box">Query Type</label>
+                    <div class="reduce">
+                        <div class="main-cont">
+                            <div class="left-align">
+                                <input type="radio" name="check" value="Enquiry" id="chk-box" class="Enquiry">
+                                <p>General Enquiry</p>
+                            </div>
+                            <div class="left-align">
+                                <input type="radio" name="check" value="Request" id="chk-box" class="request">
+                                <p>Support Request</p>
+                            </div>
+                        </div>
+                        <div class="rgh">
+                            <p id="error-message" class="only"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="text">
+                        <label for="message">Message</label>
+                        <textarea rows="11" cols="20" id="message" name="textarea"></textarea>
+                        <p id="error-message"></p>
+                    </div>
+                </div>
+                <div class="const">
+                    <div class="consent">
+                        <div id="firstp">
+                            <input type="checkbox" name="consent">
+                            <p class="star">I consent to being contacted by this team</p>
+                        </div>
+                        <div id="secp">
+                            <p id="error-message" class="small"></p>
+                        </div>
+                    </div>
+                    <div class="btn">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </section>  
+        </form> 
+    </main>
+</body>
+</html>

@@ -1,9 +1,10 @@
 body {
     padding: 0;
-    height: 100vh;
-    display: flex;
+    height: 100%;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
+    border: 2px solid red;
     font-family: "Karla", sans-serif;
     background-color: hsl(148, 38%, 91%);
 }
@@ -524,11 +525,11 @@ label, p {
     }
 }
 
-@media only screen and (min-width:1282px) {
+/* @media only screen and (min-width:1282px) {
     body {
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-}
+} */

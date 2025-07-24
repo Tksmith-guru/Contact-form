@@ -5,6 +5,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 main {
@@ -501,9 +502,9 @@ label, p {
     }
 }
 
-@media only screen and (min-width: 801px) and (max-width: 911px) {
+@media only screen and (min-width: 801px) and (max-width: 850px) {
     body {
-        height: 100vh;
+        height: 100%;
     }
 
     form {
@@ -522,15 +523,15 @@ label, p {
 
 @media only screen and (min-width:1020px) and (max-width: 1200px) {
     body {
-        height: 100vh;
+        height: 100%;
     }
 }
 
 @media only screen and (min-width:1282px) {
     body {
-        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 100%;
     }
 }

@@ -5,7 +5,6 @@ const emailInput = document.getElementById('Email');
 const queryTypeRadios = document.querySelectorAll('input[name="check"]');
 const messageTextarea = document.getElementById('message');
 const consentCheckbox = document.querySelector('input[name="consent"]');
-const errorMessages = document.querySelectorAll('#error-message');
 
 function showError(element, message) {
     element.textContent = message;
@@ -60,7 +59,7 @@ queryTypeRadios.forEach((radio) => {
         if (radio.checked) {
             radio.parentElement.classList.add('radioChecked');
         }
-        const queryError = document.querySelector('.rgh #error-message.only');
+        const queryError = document.querySelector('.rgh .error-message.only');
         if (Array.from(queryTypeRadios).some(r => r.checked)) {
             hideError(queryError);
         }
@@ -74,7 +73,7 @@ messageTextarea.addEventListener('input', () => {
 });
 
 consentCheckbox.addEventListener('change', () => {
-    const consentError = document.querySelector('#secp #error-message');
+    const consentError = document.querySelector('#secp .error-message');
     if (consentCheckbox.checked) {
         hideError(consentError);
     }
@@ -84,7 +83,7 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     let isValid = true;
-    let formData = [];
+    const formData = [];
 
     if (firstNameInput.value.trim() === '') {
         showError(firstNameInput.nextElementSibling, "This field is required");
@@ -107,7 +106,7 @@ form.addEventListener('submit', (event) => {
         hideError(emailInput.nextElementSibling);
     }
 
-    const queryError = document.querySelector('.rgh #error-message.only');
+    const queryError = document.querySelector('.rgh .error-message.only');
     const isQueryTypeSelected = Array.from(queryTypeRadios).some(radio => radio.checked);
     if (!isQueryTypeSelected) {
         showError(queryError, "Please selct a query type");
@@ -123,7 +122,7 @@ form.addEventListener('submit', (event) => {
         hideError(messageTextarea.nextElementSibling);
     }
 
-    const consentError = document.querySelector('#secp #error-message');
+    const consentError = document.querySelector('#secp .error-message');
     if (!consentCheckbox.checked) {
         showError(consentError, 'To submit this form, pleae consent to be contacted');
         isValid = false;
